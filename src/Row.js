@@ -36,7 +36,7 @@ export default class Row extends Component {
 
   _panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => !this.props.disabled,
-    onMoveShouldSetPanResponder: () => !this.props.disabled,
+    onMoveShouldSetPanResponder: () => this.props.disabled,
 
     onPanResponderGrant: (e, gestureState) => {
       e.persist();
